@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Food</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="section">
+      <aside id="aside">
+        <div class="sidebar">
+          <ul class="ul1">
+            <div id="openPopupBtn" class="back-change">
+              <a class="symbol" href="#"
+                ><li class="icons"><i class="icons-io ri-menu-line"></i></li
+              ></a>
+            </div>
+            <div id="home" class="closepop-button back-change">
+              <a class="symbol" href="#"
+                ><li class="icons"><i class="icons-io ri-home-line"></i></li
+              ></a>
+            </div>
+            <div id="delicon1" class="closepop-button back-change">
+              <a class="symbol" href="#"
+                ><li class="icons"><i class="icons-io ri-percent-line"></i></li
+              ></a>
+            </div>
+            <div id="pie" class="closepop-button back-change">
+              <a class="symbol" href="#"
+                ><li class="icons">
+                  <i class="icons-io ri-pie-chart-line"></i></li
+              ></a>
+            </div>
+            <div id="delicon2" class="closepop-button back-change">
+              <a class="symbol" href="#"
+                ><li class="icons"><i class="icons-io ri-chat-3-line"></i></li
+              ></a>
+            </div>
+            <div id="delicon3" class="closepop-button back-change">
+              <a class="symbol" href="#"
+                ><li class="icons">
+                  <i class="icons-io ri-notification-3-line"></i></li
+              ></a>
+            </div>
+            <div id="openPopupBtn7" class="back-change">
+              <a class="symbol" href="#"
+                ><li class="icons">
+                  <i class="icons-io ri-shopping-cart-2-line"></i>
+                  <span class="quantity" id="quant">0</span>
+                </li></a
+              >
+            </div>
+            <div id="openPopupBtn8" class="back-change">
+              <a class="symbol" href="#"
+                ><li class="icons"><i class="icons-io ri-user-3-line"></i></li
+              ></a>
+            </div>
+          </ul>
+        </div>
+      </aside>
+      <article id="article">
+        <!-- header start -->
+        <div class="header">
+          <div class="jaegar-resto">
+            <p class="txt1"><b>Jaegar Resto</b></p>
+            <p id="date"></p>
+          </div>
+          <div class="search-div">
+            <i><img class="search-img" src="icons/lupa.svg" /></i>
+            <input
+              type="text"
+              class="inp1"
+              id="myInput"
+              placeholder="Search for food, coffe, etc.."
+            />
+          </div>
+        </div>
+        <!-- header end -->
+
+        <!-- menu start -->
+        <nav>
+          <ul class="menu1">
+            <li value="All" class="menu-item" onclick="changeMenu(0)">
+              <p>Hot Dishes</p>
+            </li>
+            <li value="cold-dishes" class="menu-item" onclick="changeMenu(1)">
+              <p>Cold Dishes</p>
+            </li>
+            <li value="soup" class="menu-item" onclick="changeMenu(2)">
+              <p>Soup</p>
+            </li>
+            <li value="grill" class="menu-item" onclick="changeMenu(3)">
+              <p>Grill</p>
+            </li>
+            <li value="appetizer" class="menu-item" onclick="changeMenu(4)">
+              <p>Appetizer</p>
+            </li>
+            <li
+              value="dessert"
+              id="dessert"
+              class="menu-item"
+              onclick="changeMenu(5)"
+            >
+              <p>Dessert</p>
+            </li>
+          </ul>
+        </nav>
+        <!-- menu end -->
+        <!-- menu 2 start -->
+        <div class="menu3">
+          <div class="menu2">
+            <p class="txt-dish">Choose Dishes</p>
+            <div class="dropdown items" id="dropdown">
+              <i class="ri-arrow-down-s-line" id="arrow"></i>
+              <h3 id="default">Prices</h3>
+              <div class="dropdown open" id="dropdownopen">
+                <h3 class="changer" value="A - Z">A - Z</h3>
+                <h3 class="changer" value="Z - A">Z - A</h3>
+                <h3 class="changer" value="Prices">Prices</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- menu 2 end -->
+
+        <!-- pizzas start -->
+        <div class="container">
+          <div class="list"></div>
+        </div>
+
+        <!-- buy pizza start -->
+        <div class="overlay" id="myCard">
+          <div class="card" id="card">
+            <div class="arrow-order">
+              <i id="order-arrow" class="ri-arrow-left-line"></i>
+              <p class="arrow-txt">Orders#12345</p>
+            </div>
+            <div class="divv">
+              <div><input class="inputt" type="button" value="Dine In" /></div>
+              <div><input class="inputt" type="button" value="To GO" /></div>
+              <div><input class="inputt" type="button" value="Delivery" /></div>
+            </div>
+            <div class="item-div">
+              <div><p class="item-text">Item</p></div>
+              <div class="price-text">
+                <p>Qty</p>
+                <p>Price</p>
+              </div>
+            </div>
+            <ul class="listCard"></ul>
+            <div class="checkOut1">
+              <p>Discount</p>
+              <p>$0</p>
+            </div>
+            <div class="checkOut">
+              <p class="sub-total">Sub Total</p>
+              <div class="total">0</div>
+            </div>
+            <div class="payment-div">
+              <input
+                class="payment-inp"
+                id="payopen"
+                type="button"
+                value="Continue to Payment"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- buy pizza end -->
+
+        <!-- pizzas end -->
+
+        <!-- icon fist popup start -->
+        <div class="popup" id="popup" style="display: none">
+          <div class="popup-content">
+            <p class="func-txt">Functions</p>
+            <div class="attr">
+              <div class="all1">
+                <ul class="ull">
+                  <li class="lii" id="information">
+                    <i class="ri-information-line"></i>
+                    <p>Information</p>
+                  </li>
+                  <li class="lii">
+                    <i class="ri-global-line"></i>
+                    <p>Language</p>
+                  </li>
+                  <li class="lii">
+                    <i class="ri-time-line"></i>
+                    <p>Order History</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- icon first popup end -->
+
+        <!-- icon 7 popup start -->
+
+        <div class="popup7" id="popup7">
+          <div class="popup-content7">
+            <p class="func-txt">Orders</p>
+            <div class="noorder-img">
+              <img class="noorder-img" src="image/noorder.svg" />
+            </div>
+            <p class="noorder-text">No Order</p>
+            <p class="noorder-text2">Go find the products you like</p>
+            <button id="closePopupBtn7">To Order</button>
+          </div>
+        </div>
+
+        <!-- icon 7 popup end -->
+
+        <!-- icon 8 start -->
+        <div class="popup8" id="popup8">
+          <div class="popup-content8">
+            <p class="func-txt">Profil</p>
+            <div class="btn8">
+              <div class="div1">
+                <div>
+                  <div class="rds">Sh</div>
+                </div>
+                <div class="div2">
+                  <p>Sherzod</p>
+                </div>
+              </div>
+              <div class="div3">
+                <p class="p1">Edit Profile</p>
+              </div>
+            </div>
+            <div class="order-history" id="orderhistory">
+              <img src="icons/popup2-1-icon.svg" />
+              <p class="history">Order history</p>
+            </div>
+          </div>
+        </div>
+        <!-- icon 8 end -->
+
+        <!-- order history popup start -->
+        <div class="orr" id="order">
+          <div class="popup-orr">
+            <p class="func-txt">Orders History</p>
+            <div class="order1">
+              <div class="order-div">
+                <p class="order-text1">Order #123234</p>
+                <p class="ordertext2">Tuesday, 1 Feb 2023</p>
+              </div>
+              <div class="order-div">
+                <p class="order-text1">Order #123234</p>
+                <p class="ordertext2">Tuesday, 1 Feb 2023</p>
+              </div>
+              <div class="order-div">
+                <p class="order-text1">Order #123234</p>
+                <p class="ordertext2">Tuesday, 1 Feb 2023</p>
+              </div>
+              <div class="order-div">
+                <p class="order-text1">Order #123234</p>
+                <p class="ordertext2">Tuesday, 1 Feb 2023</p>
+              </div>
+            </div>
+            <button id="closeorder">Back</button>
+          </div>
+        </div>
+        <!-- order history popup end-->
+
+        <!-- information popup start -->
+        <div class="inff" id="info">
+          <div class="popup-inff">
+            <p class="func-txt">Information</p>
+            <div class="info-div">
+              <div class="info1">
+                <img src="icons/info-1-icon.svg" />
+                <p class="info-text">+998 77 048 77 48</p>
+              </div>
+              <div class="info1">
+                <img src="icons/info-2-icon.svg" />
+                <p class="info-text">Tashkent, str Toshbuloq 46</p>
+              </div>
+              <div class="info1">
+                <img src="icons/info-3-icon.svg" />
+                <p class="info-text">khamidovsherzod003@gmail.com</p>
+              </div>
+              <div class="info1">
+                <img src="icons/info-4-icon.svg" />
+                <p class="info-text">www.TheFood.com</p>
+              </div>
+              <div class="info-div2">
+                <img class="info-icon" src="icons/info-5-icon.svg" />
+                <img class="info-icon" src="icons/info-6-icon.svg" />
+                <img class="info-icon" src="icons/info-7-icon.svg" />
+                <img class="info-icon" src="icons/info-8-icon.svg" />
+              </div>
+            </div>
+
+            <button id="closeinfo">Back</button>
+          </div>
+        </div>
+        <!-- information popup end-->
+
+        <!-- ======================================================================== -->
+
+        <div class="buy" id="buy" style="display: none">
+          <div class="popup-buy">
+            <div class="pay-div">
+              <p class="func-txt1">Payment</p>
+              <p class="pay-text">3 payment method avialable</p>
+            </div>
+            <div class="pay-div4">
+              <p class="func-txt1">Payment Method</p>
+              <div class="pay-div2">
+                <div class="pay-div3">
+                  <i id="pay-icon" class="ri-bank-card-line"></i>
+                  <p style>Credit Card</p>
+                </div>
+                <div class="pay-div3">
+                  <i id="pay-icon" class="ri-paypal-line"></i>
+                  <p>PayPal</p>
+                </div>
+                <div class="pay-div3">
+                  <i id="pay-icon" class="ri-wallet-line"></i>
+                  <p>Cash</p>
+                </div>
+              </div>
+
+              <div class="paydivv">
+                <p class="pay-text2">Cardholder name</p>
+                <input
+                  type="text"
+                  class="pay-inp"
+                  placeholder="Sherzod Khamidov"
+                  style="padding-right: 70px;"
+                />
+              </div>
+              <div class="paydivv">
+                <p class="pay-text2">Card number</p>
+                <input
+                id="numericInput" oninput="validateInput(this)"
+                  type="text"
+                  class="pay-inp"
+                  placeholder="0000 1111 2222 3333"
+                  maxlength="16"
+                />
+              </div>
+              <div class="pay-div5">
+                <div class="paydivv3">
+                  <p class="pay-text3">Expiration Date</p>
+                  <input  id="numericInput" oninput="validateInput(this)" type="text" class="pay-inp2" placeholder="02/2022" maxlength="8" />
+                </div>
+                <div class="paydivv2">
+                  <div class="paydivv3">
+                    <p class="pay-text3">CVV</p>
+                    <input
+                      type="password"
+                      class="pay-inp2"
+                      placeholder="x x x"
+                      maxlength="3"
+                      style="letter-spacing: 5px;"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="pay-div6">
+                <div class="paydivv3">
+                  <p class="pay-text4">Order Type</p>
+                  <div class="dropdown1 items" id="dropdown1">
+                    <i class="ri-arrow-down-s-line" id="arrow1"></i>
+                    <h3 id="default1">Dine In</h3>
+                    <div class="dropdown1 open" id="dropdownopen1">
+                      <h3 class="changer1" value="A - Z">Dine In</h3>
+                      <h3 class="changer1" value="Z - A">To Go</h3>
+                      <h3 class="changer1" value="Prices">Delivery</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="paydivv3">
+                  <p class="pay-text4" >Table no.</p>
+                  <input
+                  id="numericInput" oninput="validateInput(this)"
+                    class="pay-btn1"
+                    type="text"
+                    placeholder="write your table no:"
+                    maxlength="3"
+                  />
+                </div>
+              </div>
+              <div class="pay-div7">
+                <div class="paydivv4">
+                  <input
+                    type="button"
+                    id="payclose"
+                    class="pay-inp3"
+                    value="Cancel"
+                  />
+                </div>
+                <div class="paydivv4">
+                  <input
+                    type="button"
+                    class="pay-inp4"
+                    id="pay-inp4"
+                    value="Confirm Payment"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =========================================================================== -->
+      </article>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
