@@ -1,4 +1,5 @@
 # Food-Delivery
+https://the-food-delivery.netlify.app
 Food Delivery Web Site.Beautiful Design, Comfortable interface and Modern Technologies. Made with HTML , CSS , JAVASCRIPT. Responsive design( only for mobile phones and desktops)
 ![Screenshot 2023-08-12 154102](https://github.com/realsherzod/Food-Delivery/assets/121491928/fa60fa07-d00e-467b-94c7-490bc44eb44f)
 ![Screenshot 2023-08-12 154118](https://github.com/realsherzod/Food-Delivery/assets/121491928/6313d3e8-8db8-4954-80d3-40ff2efe596e)
